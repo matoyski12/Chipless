@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Chippy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,139 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soq-VZ-gDD">
+                                <rect key="frame" x="89" y="507" width="61" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="BET"/>
+                                <connections>
+                                    <action selector="Bet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hTV-HN-L35"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNy-XN-E0S">
+                                <rect key="frame" x="224" y="507" width="58" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="FOLD"/>
+                                <connections>
+                                    <action selector="Fold:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uKc-as-Jbn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDi-wB-GlJ">
+                                <rect key="frame" x="158" y="507" width="58" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="CHECK"/>
+                                <connections>
+                                    <action selector="Check:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cpn-Kf-FEM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upk-QG-tki">
+                                <rect key="frame" x="268" y="28" width="55" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="$500"/>
+                                <connections>
+                                    <action selector="Chip500:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cjj-Kh-WSS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5at-9a-4Ne">
+                                <rect key="frame" x="134" y="27" width="61" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="$25"/>
+                                <connections>
+                                    <action selector="Chip25:" destination="BYZ-38-t0r" eventType="touchUpInside" id="71S-68-Z48"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blq-tc-aBb">
+                                <rect key="frame" x="72" y="28" width="61" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="$10"/>
+                                <connections>
+                                    <action selector="Chip10:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mP8-LL-ztF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyK-rh-Olg">
+                                <rect key="frame" x="16" y="28" width="61" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="$5"/>
+                                <connections>
+                                    <action selector="Chip5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="faI-5B-haP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTb-2h-JYL">
+                                <rect key="frame" x="45" y="371" width="285" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Start"/>
+                                <connections>
+                                    <action selector="StartGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bnU-Ce-Rac"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="App Icon" translatesAutoresizingMaskIntoConstraints="NO" id="Xna-HC-VKV">
+                                <rect key="frame" x="67" y="112" width="240" height="185"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jf0-zH-nyw">
+                                <rect key="frame" x="138" y="608" width="274" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwF-Ar-oB0">
+                                <rect key="frame" x="77" y="294" width="221" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="CreateGame"/>
+                                <connections>
+                                    <action selector="CreateGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R8d-9S-isX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UU5-i2-zLR">
+                                <rect key="frame" x="92" y="362" width="191" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="Join Game"/>
+                                <connections>
+                                    <action selector="JoinGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NAM-8z-jFT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bsq-0v-uKD">
+                                <rect key="frame" x="199" y="28" width="61" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="$100"/>
+                                <connections>
+                                    <action selector="Chip100:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9rc-W3-GmS"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="AppIcon" destination="Xna-HC-VKV" id="ido-8a-xKM"/>
+                        <outlet property="Bet" destination="soq-VZ-gDD" id="AUU-2K-uzO"/>
+                        <outlet property="Check" destination="LDi-wB-GlJ" id="aMt-6q-jd3"/>
+                        <outlet property="Chip10" destination="Blq-tc-aBb" id="ezY-fH-0Dz"/>
+                        <outlet property="Chip100" destination="Bsq-0v-uKD" id="wzG-60-1PA"/>
+                        <outlet property="Chip25" destination="5at-9a-4Ne" id="3Ug-NS-bM5"/>
+                        <outlet property="Chip5" destination="tyK-rh-Olg" id="ygT-s2-r40"/>
+                        <outlet property="Chip500" destination="upk-QG-tki" id="JDr-gd-6KP"/>
+                        <outlet property="CreateGame" destination="UwF-Ar-oB0" id="eYk-2a-Uo1"/>
+                        <outlet property="Fold" destination="YNy-XN-E0S" id="VXz-ix-6zL"/>
+                        <outlet property="JoinGame" destination="UU5-i2-zLR" id="iLA-oj-CYR"/>
+                        <outlet property="StartGame" destination="wTb-2h-JYL" id="qiE-Fg-vru"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="$10" width="500" height="500"/>
+        <image name="$100" width="500" height="500"/>
+        <image name="$25" width="355" height="355"/>
+        <image name="$5" width="600" height="600"/>
+        <image name="$500" width="300" height="300"/>
+        <image name="App Icon" width="1280" height="1024"/>
+        <image name="BET" width="114" height="118"/>
+        <image name="CHECK" width="111" height="119"/>
+        <image name="CreateGame" width="220" height="48"/>
+        <image name="FOLD" width="112" height="119"/>
+        <image name="Join Game" width="185" height="48"/>
+        <image name="Start" width="315" height="149"/>
+    </resources>
 </document>
