@@ -47,16 +47,23 @@ class MPCHandler: NSObject, MCSessionDelegate {
         }
     
     func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
+        _ = ["peerID":peerID,"state":state.rawValue]
+        DispatchQueue.main.async(execute: <#T##() -> Void#>); in
+        NotificationCenter."default".post("MPC_DidChangeStateNotification", object_isClass(nil), _: _)}
+        
     }
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
-        let = userInfo ["peerID":peerID,"state":state]
+        _ = ["data":data,"peerID":peerID]
+        DispatchQueue.main.async(execute: <#T##() -> Void#>); in
+        NotificationCenter."default".post("MPC_DidReceiveDataNotification", object_isClass(nil), _: _)}
+            
+            
         
 }
     func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL, withError error: Error?) {
         
 }
     func session(_ session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, with progress: Progress) {
-        <#code#>
 }
 
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
@@ -65,4 +72,3 @@ class MPCHandler: NSObject, MCSessionDelegate {
 
     
     
-}
